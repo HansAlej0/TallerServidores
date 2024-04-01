@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.tarjeta {
+  width: 300px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilos de la tarjeta */
+.card {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Estilos del encabezado de la tarjeta */
+.card-header {
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Estilos del contenido de la tarjeta */
+.card-content {
+  padding: 1rem;
+  display: none;
+}
+
+/* Mostrar el contenido cuando el checkbox esté marcado */
+.card-checkbox:checked+.card-header+.card-content {
+  display: block;
+}
+
+/* Estilos del botón */
+.card-header::after {
+  content: "\25BC";
+  /* flecha hacia abajo */
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.card-checkbox:checked+.card-header::after {
+  transform: rotate(180deg);
+}
+
+/* Estilos adicionales */
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: inherit;
+  color: inherit;
+}
